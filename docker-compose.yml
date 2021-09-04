@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  dgraph:
+    image: dgraph/standalone:latest
+    ports:
+      - published: 8000
+        target: 8000
+      - published: 8080
+        target: 8080
+      - published: 9080
+        target: 9080
