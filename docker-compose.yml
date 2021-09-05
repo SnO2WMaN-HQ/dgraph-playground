@@ -1,12 +1,16 @@
 version: "3.8"
 
 services:
-  dgraph:
-    image: dgraph/standalone:latest
+  standalone:
+    image: dgraph/standalone:v21.03.0
     ports:
-      - published: 8000
-        target: 8000
       - published: 8080
         target: 8080
       - published: 9080
         target: 9080
+
+  ratel:
+    image: dgraph/ratel:v21.03.0
+    ports:
+      - published: 8000
+        target: 8000
